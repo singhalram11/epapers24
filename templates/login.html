@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+
+
+  #menu{width:70%;float:right}
+  </style>
+</head>
+<body class="bg-light">
+<!--Logo and menu desin-->
+<div id="menu" class="flex-container" >
+<nav  class="navbar navbar-expand-sm bg-warning navbar-light sticky-top justify-content-between">
+<ul class="navbar-nav justify-content-around">
+<li class="navbar-item">
+<a href="#" class="nav-link">Home</a></li>
+<li class="navbar-item">
+<a href="#" class="nav-link">News</a></li>
+<li class="navbar-item"">
+<a href="#" class="nav-link">About Us</a></li>
+<li class="navbar-item">
+<a href="#" class="nav-link">Contact Us</a></li>
+</ul>
+</nav>
+</div>
+<!-- menu end registration start-->
+<div class="jumbotron" style="width:30%;">
+
+<!-- login from -->
+
+<form action="/" class="needs-validation" method="post">
+  {% csrf_token %}
+<div  class="form-group" style="max-width:90%;height:auto;" >
+<h1 class="container" align="center">Login</h1>
+<label class="mr-sm-2">Email:</label>
+<input placeholder="Email" type="email" name="user_email" class="form-control mb-2 mr-sm-2" required></input>
+<label class="mr-sm-2">password:</label>
+<input type="password" placeholder="Password" name="user_password" class="form-control mb-2 mr-sm-2" required></input>
+<button type="submit" class="btn btn-outline-success btn-lg mb-2">Login</button>
+  <a href="accounts/password_reset">Forget password?</a>
+</div>
+</form>
+    {% for message in messages %}
+  <h6 textcolor="red">{{message}}</h6>
+  {%endfor%}
+<!--registration form-->
+<form action="register" class="needs-validation" method="post">
+  {% csrf_token %}
+<div class="form-group" style="max-width:90%;height:auto;">
+<h1 class="container" align="center">Registration</h1>
+<label>Name</label>
+<input class="form-control mb-2 mr-sm-2" type="text" name="first_name" required />
+<label>Email</label>
+<input class="form-control mb-2 mr-sm-2" type="email" name="email" required />
+<label>Mobile Number</label>
+<input class="form-control mb-2 mr-sm-2" type="number" name="mobile"  required />
+<label>Password</label>
+<input class="form-control mb-2 mr-sm-2" type="password" name="password1" required />
+<label>Confirm Password</label>
+<input class="form-control mb-2 mr-sm-2" type="password" name="password2" required />
+<input type="submit" value="Register" class="btn btn-outline-success btn-lg mb-2"/>
+</div>
+</form>
+  {% for message in messages %}
+  <h6 textcolor="red">{{message}}</h6>
+  {%endfor%}
+</div>
+
+
+</body>
+</html>

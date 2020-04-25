@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Programing Solutions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  function my_function()
+  {
+    var data =
+  }
+  </script>
+</head>
+<body>
+
+<br>
+
+<div class="container">
+  <div style="float:right;margin-top:2%">
+  <h2>List of Problems</h2>
+
+  <ol class="nav flex-column" style="background-color:light;" >
+      {% for i in prob %}
+    <li class="nav-item">
+      <button type="submit" name="button" value="{{i.name}}"  class="nav-link">{{i.name}}</button>
+    </li>
+    {% endfor %}
+  </ol>
+    </div>
+  <h2 style="color:blue;">Hackerrank Programming solutions</h2><br>
+  {% for solution in solutions %}
+	<div  class="tab-content">
+    <div id="p1" class="container tab-pane active"><br>
+
+  <!-- Nav pills -->
+
+  <ul class="nav nav-pills" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="pill" href="#home">Problem</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menu1">Solution</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#video">Video Solution</a>
+    </li>
+  </ul>
+    </div>
+    </div>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <h3>Problem:{{solution.name}}</h3>
+      <pre width="60%" style="background-color:black;color:white;padding:2%;width:75%">
+        {{solution.problem}}
+	  </pre>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+      <h3>Solution:{{solution.name}}</h3>
+      <pre style="background-color:black;color:white;padding:2%;width:60%" width="75%">
+      {{solution.solution}}
+	  </pre>
+    </div>
+     <div id="video" class="container tab-pane fade"><br>
+      <h3>Video:{{solution.name}}</h3>
+      <iframe width="60%" height="415"  style="margin:2%;"  src="{{solution.video}}"></iframe>
+    </div>
+  </div>
+      {%endfor%}
+</div>
+
+
+  <!-- Tab panes --
+
+
+
+-->
+
+</body>
+</html>

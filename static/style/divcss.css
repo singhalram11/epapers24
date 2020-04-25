@@ -1,0 +1,45 @@
+body{margin:0%;padding:0%}
+#div1{width:80%;height:150px;position:relative;left:10%;background-color:white;}
+#div1 h1{font-size:800%;text-align:center;font-style:italic;color:red;
+color:brown;text-shadow:5px 5px 5px black;}
+#div2{width:100%;height:50px;}
+#div2 ul{margin:1%;padding:0px;}
+ #div2 ul li{width:17%;}
+#div2 ul li{background-color:green;line-height:50px;text-align:center;list-style:none;float:left;font-size:130%;}
+#div2 ul li a{text-decoration:none;color:white;display:block;}
+#div2 ul li a:hover{background-color:tomato;}
+#div2 ul li ul li{display:none;}
+#div2 ul li:hover ul li{display:block;float:none;width:100%;position:relative;z-index:1000;font-size:80%;border:1px solid black;}
+#slide{width:50%;position:relative;overflow:hidden;left:25%;}
+#slide #div3{width:800%;height:400px;position:relative;left:20%;margin:2%;box-shadow:2px 2px 10px black;
+animation:slider 40s infinite;}
+#slide #div3 img{width:12.5%;height:400px;float:left;}
+#div4{width:40%;height:80px;background-color:tomato;position:relative;left:30%;}
+#div4 h1{color:black;font-size:300%;text-align:center;}
+#div5 .d1 {width:22%;height:300px;position:relative;background-color:white;box-shadow:5px 5px 20px grey;border-radius:6%;}
+.d2{width:100%;height:150px;margin:3%;}
+#div5 .d1{float:left;margin:5%;}
+#div5 .b1{position:relative;height:30px;width:25%;background-color:skyblue;border:1px solid #176554;}
+#div5 .b2{position:relative;height:30px;width:45%;background-color:skyblue;border:1px solid #176554;left:15%;}
+.d2 p{color:brown;text-align:justified;} 
+#div5 h3{color:black;}
+#div6{clear:both;}
+@keyframes slider
+{
+0%{left:0px;}5%{left:0%;}10{left:-100%;}
+12.5%{left:-100%;}22.5{left:-200%;}25%{left:-200%;}35%{left:-300%;}37.5%{left:-300%}
+47.5%{left:-400%;}50%{left:-400%}60%{left:-500%;}62.5%{left:-500%;}
+72.5%{left:-600%;}75%{left:-600%;}85%{left:-700%;}87.5%{left:-700%;}97.5%{left:-800%}100%{left:0%}
+}
+#div6{width:100%;height:400px;background-color:#282828;position:relative;top:50px;}
+#div6 #menu{width:33%;}
+#menu li a,li{color:white;font-size:130%;text-decoration:none;}
+li{list-style:none;color:white}
+#contact{color:white;width:33%;}
+#div6 div{float:left;position:relative;left:10%;}
+#div6 h3{color:grey;font-size:150%;}
+.prime{float:left;}
+ul li ul li{clear:both;display:none;list-style:none}
+ul li:hover ul li{display:block;}
+li button{background-color:lightblue;height:30px;width:45%;background-color:skyblue;position:relative;left:15%;z-index:10001;}
+button:hover{box-shadow:5px 5px 30px black;}

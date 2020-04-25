@@ -1,0 +1,111 @@
+{% load static %}
+{% static "images" as baseUrl%}
+<html>
+<head>
+  <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link href="{% static 'style/divcss.css' %}" type="text/css" rel="stylesheet"/>
+<style>
+ #div2 ul li {width:15%}
+</style>
+
+<script>
+function warning()
+{alert('If not find your subjects.Take a look in both the semesters of a year');}
+</script>
+</head>
+
+<body bgcolor="silver">
+<header>
+<div id="div1">
+<h1>epapers24.com<h1>
+</div>
+</header>
+<nav class="nav-justified">
+<div id="div2">
+<ul>
+<li><a href="#" >Home</a></li>
+<li><a href="#div4">courses</a></li>
+<li><a href="#">About Us</a></li>
+<li style="width:20%"><a href="#">Contact Us</a>
+ <ul>
+<li>Mob:7509068453</li>
+<li>mail:ramsinghal750@gmail.com</li>
+</ul>
+</li>
+  <li style="width:20%"><a href="tutorial/programmingsolutions">Programming solutions</a>
+ <li><a href="accounts/logout">Logout</a></li>
+<ul>
+</div>
+</nav>
+<section>
+<article>
+<div id="slide">
+<div id="div3">
+ {% for branch in branches%}
+ <img src="{{branch.b_img.url}}" width="100%" height="120px"/>
+ {%endfor%}
+</div>
+</div>
+</article>
+<article>
+<div id="div4">
+<h1>Popular Courses<h1>
+ {% for branch in branches%}
+</div>
+ <div id="div5">
+<div class="d1">
+<img src="{{branch.b_img.url}}" width="100%" height="120px"/>
+<div class="d2">
+<h3>{{branch.b_name}}</h3>
+<p>{{branch.b_desc}}<p>
+<div class="d3">
+<button class="b1 prime" type="button" onclick="location.href='https://drive.google.com/open?id=12I7FfeDUbyNJ_KPSXsbutkXo488TZd72'">Papers</button>
+<ul>
+<li><button class="b2 prime"  type="button" title="RGPV Notes">Notes</button>
+<ul>
+<li><a href='https://be.rgpvnotes.in/p/first-year.html'  target="_blank"><button type="button" onclick="warning();" >First Year</button></a></li>
+<li><a href="https://be.rgpvnotes.in/p/information-technology-2nd-year.html"  target="_blank"><button type="button" >Second Year</button></a></li>
+<li><a href="https://be.rgpvnotes.in/p/information-technology-3rd-year.html"  target="_blank"><button type="button" >Third Year</button></a></li>
+<li><a href="https://be.rgpvnotes.in/p/information-technology-4th-year.html"  target="_blank"><button type="button" >Fourth Year</button></a></li>
+</ul>
+</li>
+</ul>
+</div>
+ </div>
+ </div>
+ </div>
+ {% endfor %}
+</article>
+</section>
+<footer id="div6">
+<hr width="80%;"align="center"/>
+<div id="menu">
+<ul>
+<li><h3>Menu</h3></li>
+<li><a href="#">Home</a></li>
+<li><a href="#div4">courses</a></li>
+<li><a href="#">Contact Us</a></li>
+<li><a href="#">About Us</a></li>
+</ul>
+</div>
+<div id="contact">
+<li><h3>Contact Us</h3></li>
+<li>Mob.:7509068453<li>
+<li>mail:ramsinghal750@gmail.com<li>
+</div>
+<div id="program">
+<li><h3>Programs</h3></li>
+<li>Our Mission</li>
+<li>Our Vision</li>
+<li>Projects</li>
+<li>Join Us</li>
+</div>
+<hr width="80%;"align="center"/>
+<marquee><h1 align="center" style="font-size:400%;"><i>epapers24.com</i><h1></marquee>
+</footer>
+
+</body>
+</html>
